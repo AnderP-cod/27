@@ -2,10 +2,12 @@ import random
 
 def randomm():
     random_number_1 = random.randint(0, 100)
+    random_number_2 = random.randrange(0, 100)
     for i in range(100):
-        if i == random_number_1:
-            print(random_number_1)
-            yield i
+        print(random.randint(0, 100))
+        if random_number_1 == i:
+            yield f"{random_number_1} {i}"
+            break
 
 a = randomm()
 
